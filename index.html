@@ -11,30 +11,17 @@
 
 <body>
     <main>
-        <h1>Information om kurser</h1>
-        <button id="newcourse-button">Lägg till ny kurs</button>
-        <form id="course-form" class="hidden">
-            <label for="code">Kurskod</label>
-            <input type="text" name="code" id="code">
-            <br>
-            <label for="coursename">Kursnamn</label>
-            <input type="text" name="coursename" id="coursename">
-            <br>
-            <label for="progression">Progression</label>
-            <input type="text" name="progression" id="progression">
-            <br>
-            <label for="syllabus">Kursplan</label>
-            <input type="text" name="syllabus" id="syllabus">
-            <br>
-            <button type="submit" id="newcourse-button">Lägg till kurs</button>
-        </form>
+        <h1>Startsida för kurser</h1>
+        <a href="newcourse.html" id="newcourse-button">Lägg till ny kurs</a>
         <table id="table-course">
+            <caption>Dina kurser</caption>
             <thead>
                 <tr>
                     <th>Kurskod</th>
                     <th>Kursnamn</th>
                     <th>Progression</th>
                     <th>Kursplan</th>
+                    <th class="delete-course" aria-label="Åtgärd"></th>
                 </tr>
             </thead>
             <tbody id="table-body">

@@ -1,9 +1,193 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    max-width: 1140px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(134, 241, 241);
+    min-height: 100vh;
+    padding-top: 2em;
+}
+
+
+/* Tabellen för kurserna */
+
+#table-course {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 5em;
+    background-color: antiquewhite;
+    padding: 1.5em;
+    border-radius: 12px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    box-shadow: 0 6px 10px -3px black;
+}
+
+#table-course th {
+    width: 100%;
+    padding: 0.6em;
+    text-align: center;
+    background-color: rgb(255, 146, 4);
+}
+
+#table-course th.delete-course,
+#table-course td.delete-course {
+    width: 40px;
+    text-align: center;
+}
+
+#table-course td {
+    padding: 0.6em;
+    text-align: left;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgba(121, 114, 114, 0.468);
+}
+
+#table-course caption {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#table-body td {
+    text-align: center;
+}
+
+
+/* formuläret för kurserna */
+
 #course-form {
-    opacity: 1;
-    transition: 1s ease-in-out;
+    width: 100%;
+}
+
+.form-wrapper {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: antiquewhite;
+    padding: 1em;
+    margin-bottom: 3em;
+    border-radius: 20px;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.label-container label {
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.label-container input {
+    width: 90%;
+    padding: 0.5em 0.5em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+}
+
+#newcourse-button,
+#add-course-btn,
+#seecourse-btn {
+    padding: 0.5em 0.75em;
+    background-color: rgb(247, 119, 0);
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+#add-course-btn {
+    margin-top: 1em;
+    margin-bottom: 5em;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#seecourse-btn {
+    background-color: rgb(240, 0, 148);
+    color: rgb(0, 0, 0);
+    padding: 0.25 0.5em;
+}
+
+.delete-course {
+    text-align: right;
+    padding: 0;
+}
+
+.delete-course-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .hidden {
     display: none;
     opacity: 0;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0;
+    list-style-position: inside;
+    margin-left: 0;
+    text-align: left;
+}
+
+@media screen and (max-width: 556px) {
+    .form-wrapper {
+        width: 90%;
+        padding: 1em 0.5em;
+    }
+    #table-course th {
+        font-size: 0.9em;
+        padding-top: 0.5em;
+    }
+    #table-body {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    #table-course {
+        width: 100%;
+        padding: 0.5em;
+    }
+    #table-course th.delete-course,
+    #table-course td.delete-course {
+        width: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #table-course th {
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+    #table-body {
+        font-size: 0.8em;
+    }
 }

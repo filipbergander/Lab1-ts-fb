@@ -11,23 +11,32 @@
 
 <body>
     <main>
-        <h1>Lägg till kurser</h1>
-        <nav><a href="index.html"> Till kurser</a></nav>
-        <form id="course-form">
-            <label for="code">Kurskod</label>
-            <input type="text" name="code" id="code">
-            <br>
-            <label for="coursename">Kursnamn</label>
-            <input type="text" name="coursename" id="coursename">
-            <br>
-            <label for="progression">Progression</label>
-            <input type="text" name="progression" id="progression">
-            <br>
-            <label for="syllabus">Kursplan</label>
-            <input type="text" name="syllabus" id="syllabus">
-            <br>
-            <button type="submit" id="newcourse-button">Lägg till kurs</button>
+        <h1>Lägg till kurs</h1>
+        <div class="error-container">
+            <ul id="error-message"></ul>
+        </div>
+        <form id="course-form" action="/">
+            <div class="form-wrapper">
+                <div class="label-container">
+                    <label for="code">Kurskod</label>
+                    <input type="text" name="code" id="code" placeholder="Skriv kurskod...">
+                </div>
+                <div class="label-container">
+                    <label for="coursename">Kursnamn</label>
+                    <input type="text" name="coursename" id="coursename" placeholder="Skriv kursnamn...">
+                </div>
+                <div class="label-container">
+                    <label for="progression">Progression</label>
+                    <input type="text" name="progression" id="progression" placeholder="Skriv progression...">
+                </div>
+                <div class="label-container">
+                    <label for="syllabus">Kursplan</label>
+                    <input type="text" name="syllabus" id="syllabus" placeholder="Skriv kursplan...">
+                </div>
+                <button type="submit" id="add-course-btn">Lägg till kurs</button>
+            </div>
         </form>
+        <a href="index.html" id="seecourse-btn">Se kurser</a>
     </main>
 </body>
 
