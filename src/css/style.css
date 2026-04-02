@@ -38,12 +38,6 @@ main {
     background-color: rgb(255, 146, 4);
 }
 
-#table-course th.delete-course,
-#table-course td.delete-course {
-    width: 40px;
-    text-align: center;
-}
-
 #table-course td {
     padding: 0.6em;
     text-align: left;
@@ -58,6 +52,10 @@ main {
 
 #table-body td {
     text-align: center;
+}
+
+.row-name {
+    text-align: left !important;
 }
 
 
@@ -99,7 +97,8 @@ main {
 
 #newcourse-button,
 #add-course-btn,
-#seecourse-btn {
+#seecourse-btn,
+#clear-storage-btn {
     padding: 0.5em 0.75em;
     background-color: rgb(247, 119, 0);
     border-radius: 12px;
@@ -123,15 +122,27 @@ main {
     padding: 0.25 0.5em;
 }
 
-.delete-course {
-    text-align: right;
-    padding: 0;
+#clear-storage-btn {
+    margin-top: 2em;
+    background-color: rgb(1, 97, 206);
+    color: white;
 }
 
 .delete-course-btn {
     cursor: pointer;
     background: none;
     border: none;
+    color: rgb(156, 0, 0);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#newcourse-button:hover,
+#add-course-btn:hover,
+#seecourse-btn:hover,
+#clear-storage-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
 
 .hidden {
@@ -170,24 +181,47 @@ main {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
     #table-course {
         width: 100%;
         padding: 0.5em;
     }
     #table-course th.delete-course,
     #table-course td.delete-course {
-        width: 25px;
         text-align: center;
+    }
+    .delete-course-btn {
+        font-size: 0.9em;
+    }
+    #table-course th {
+        text-align: left;
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 390px) {
     #table-course th {
         font-size: 0.8em;
         font-weight: normal;
     }
     #table-body {
         font-size: 0.8em;
+    }
+    .row-name {
+        text-align: left !important;
+    }
+    .delete-course-btn {
+        font-size: 0.8em;
+    }
+    #table-body td {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .row-name {
+        word-break: break-all;
+    }
+    #table-course th {
+        hyphens: auto;
     }
 }
