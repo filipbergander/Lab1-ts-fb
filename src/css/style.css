@@ -196,6 +196,10 @@ main {
     #table-course th {
         text-align: left;
     }
+    #table-body td {
+        text-align: left;
+        hyphens: auto;
+    }
 }
 
 @media screen and (max-width: 390px) {

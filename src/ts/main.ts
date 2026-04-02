@@ -158,7 +158,7 @@ function clearStorage(): void {
   }
 }
 
-/* // Lägger till data för att simulera och jobba på ett mer effektivt sätt för felhantering 
+ /* // Lägger till data för att simulera och jobba på ett mer effektivt sätt för felhantering 
 function addCourses(): void {
   const object1: CourseInfo = {
     code: "DT224G",
