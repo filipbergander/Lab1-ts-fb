@@ -6,7 +6,7 @@ interface CourseInfo {
   syllabus: string;
 }
 
-//Formulär
+//Variabler som skapats i HTML och används för att skriva ut i DOM
 const courseForm = document.querySelector<HTMLFormElement>("#course-form");
 const errorMsg = document.querySelector<HTMLDivElement>("#error-message");
 const tableBody = document.querySelector<HTMLTableSectionElement>("#table-body");
@@ -97,7 +97,7 @@ if (courseForm !== null) {
 
 // Om det finns något lagrat i localstorage så hämtas data och skrivs ut genom funktionen printnewcourse i DOM när sidan laddas
 if (localStorage.length > 0) {
-  const keys = Object.keys(localStorage); // Alla "keys" som finns i localstorage med dess array 
+  const keys = Object.keys(localStorage); // Alla "keys" som finns i localstorage med tillhörande objekt
   keys.forEach((key) => {
     const courseData = localStorage.getItem(key); // Varje key
     if (courseData) {
@@ -109,7 +109,7 @@ if (localStorage.length > 0) {
 
 
 // För att visa felmeddelanden i DOM
-function displayErrorMsg(errors: string[]) {
+function displayErrorMsg(errors: string[]): void {
   // Om inga felmeddelanden finns så gör funktionen inget
   if (!errorMsg) return;
 
