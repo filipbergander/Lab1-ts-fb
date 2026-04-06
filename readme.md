@@ -2,6 +2,8 @@
 
 Skapar en applikation för att kunna lägga till kurser som man avklarat.
 
+Webbplats: https://lab1-typescript-fb.netlify.app/
+
 **En startsida** med vy över kurser i en tabell.
 
 **En sida** för att lägga till kurser genom ett formulär.
